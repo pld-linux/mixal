@@ -8,7 +8,7 @@ Group:		Development/Languages
 Source0:	http://locke.ccil.org:/pub/esr/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	46b7fa9a94b3f9f82a81399e6f2b47b3
 Patch0:		%{name}_1.08-7.diff.gz
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Mixal is an assembler and interpreter for Donald Knuth's mythical MIX
