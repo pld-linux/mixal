@@ -25,7 +25,9 @@ przez Addison-Wesley w 1973 roku (drugie wydanie).
 %patch -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
