@@ -5,9 +5,10 @@ Version:	1.08
 Release:	3
 License:	distributable
 Group:		Development/Languages
-Source0:	http://locke.ccil.org:/pub/esr/%{name}_%{version}.orig.tar.gz
+Source0:	http://www.catb.org/~esr/mixal/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	46b7fa9a94b3f9f82a81399e6f2b47b3
 Patch0:		%{name}_1.08-7.diff.gz
+URL:		http://www.catb.org/~esr/mixal/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,8 +33,7 @@ przez Addison-Wesley w 1973 roku (drugie wydanie).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d ${RPM_BUILD_ROOT}%{_bindir}
-install -d ${RPM_BUILD_ROOT}%{_mandir}/man1
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install mixal ${RPM_BUILD_ROOT}%{_bindir}/mixal
 install mixal.1 ${RPM_BUILD_ROOT}%{_mandir}/man1/mixal.1
