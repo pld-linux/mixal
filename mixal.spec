@@ -1,13 +1,12 @@
 Summary:	Load-and-go assembler for Donald Knuth's MIX language
 Summary(pl):	Asembler dla jêzyka MIX Donalda Knutha
 Name:		mixal
-Version:	1.08
-Release:	3
+Version:	1.10
+Release:	1
 License:	distributable
 Group:		Development/Languages
-Source0:	http://www.catb.org/~esr/mixal/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	46b7fa9a94b3f9f82a81399e6f2b47b3
-Patch0:		%{name}_1.08-7.diff.gz
+Source0:	http://www.catb.org/~esr/mixal/%{name}-%{version}.tar.gz
+# Source0-md5:	7cd62ea97e6ae102b0f4926b88fc956b
 URL:		http://www.catb.org/~esr/mixal/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,8 +22,7 @@ ksi±¿ki Donalda Knutha "The Art of Computer Programming", wydanej
 przez Addison-Wesley w 1973 roku (drugie wydanie).
 
 %prep
-%setup -q -n %{name}-%{version}.orig
-%patch -p1
+%setup -q
 
 %build
 %{__make} \
@@ -33,16 +31,18 @@ przez Addison-Wesley w 1973 roku (drugie wydanie).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/%{name}-%{version}}
 
-install mixal ${RPM_BUILD_ROOT}%{_bindir}/mixal
-install mixal.1 ${RPM_BUILD_ROOT}%{_mandir}/man1/mixal.1
+install mixal $RPM_BUILD_ROOT%{_bindir}/mixal
+install mixal.1 $RPM_BUILD_ROOT%{_mandir}/man1/mixal.1
+install *.mix $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc READ.ME NOTES
+%doc MIX.DOC NOTES README
 %attr(755,root,root) %{_bindir}/mixal
 %{_mandir}/man1/*.1*
+%{_examplesdir}/%{name}-%{version}
