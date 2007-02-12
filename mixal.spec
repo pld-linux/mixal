@@ -1,5 +1,5 @@
 Summary:	Load-and-go assembler for Donald Knuth's MIX language
-Summary(pl):	Asembler dla jêzyka MIX Donalda Knutha
+Summary(pl.UTF-8):   Asembler dla jÄ™zyka MIX Donalda Knutha
 Name:		mixal
 Version:	1.10
 Release:	1
@@ -15,10 +15,10 @@ Mixal is an assembler and interpreter for Donald Knuth's mythical MIX
 computer, defined in: Donald Knuth, "The Art of Computer Programming",
 Vol. 1: Fundamental Algorithms_. Addison-Wesley, 1973 (2nd ed.)
 
-%description -l pl
+%description -l pl.UTF-8
 Mixal to asembler i interpreter dla mitycznego komputera MIX Donalda
-Knutha, zdefiniowanego w pierwszej czê¶ci "Fundamental Algorithms"
-ksi±¿ki Donalda Knutha "The Art of Computer Programming", wydanej
+Knutha, zdefiniowanego w pierwszej czÄ™Å›ci "Fundamental Algorithms"
+ksiÄ…Å¼ki Donalda Knutha "The Art of Computer Programming", wydanej
 przez Addison-Wesley w 1973 roku (drugie wydanie).
 
 %prep
