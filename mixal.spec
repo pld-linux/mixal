@@ -1,5 +1,5 @@
 Summary:	Load-and-go assembler for Donald Knuth's MIX language
-Summary(pl.UTF-8):   Asembler dla języka MIX Donalda Knutha
+Summary(pl.UTF-8):	Asembler dla języka MIX Donalda Knutha
 Name:		mixal
 Version:	1.10
 Release:	1
