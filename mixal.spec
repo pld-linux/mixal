@@ -1,12 +1,12 @@
 Summary:	Load-and-go assembler for Donald Knuth's MIX language
 Summary(pl.UTF-8):	Asembler dla języka MIX Donalda Knutha
 Name:		mixal
-Version:	1.10
+Version:	1.11
 Release:	1
 License:	distributable
 Group:		Development/Languages
 Source0:	http://www.catb.org/~esr/mixal/%{name}-%{version}.tar.gz
-# Source0-md5:	7cd62ea97e6ae102b0f4926b88fc956b
+# Source0-md5:	471abb03dfc0ef1f9fbbe8ba16f249cc
 URL:		http://www.catb.org/~esr/mixal/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
